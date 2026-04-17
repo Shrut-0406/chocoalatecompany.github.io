@@ -532,6 +532,112 @@
       }
       .btn{ display: none; }
     }
+
+
+
+
+    /* ============================= */
+/* 📱 MOBILE-ONLY FIXES */
+/* ============================= */
+
+@media (max-width: 820px){
+
+  /* Fix layout width without affecting desktop */
+  .poster{
+    width: 100% !important;
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+
+  /* Reduce outer spacing */
+  .wrap{
+    padding: 12px;
+  }
+
+  /* Tighter internal spacing */
+  .inner{
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* Stack all grid sections */
+  header,
+  main,
+  footer{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Keep heading readable */
+  h1{
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.05;
+  }
+
+  .subtitle{
+    font-size: 14px;
+  }
+
+  .lead{
+    font-size: 15px;
+  }
+
+  /* Price card adjustment */
+  .price{
+    justify-self: start;
+    transform: rotate(-1deg);
+    padding: 12px;
+  }
+
+  .price .big{
+    font-size: 32px;
+  }
+
+  /* Chips spacing */
+  .chips{
+    gap: 8px;
+  }
+
+  .chip{
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  /* Better touch button */
+  .btn{
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .phoneRow{
+    width: 100%;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 520px){
+
+  .inner{
+    padding: 14px;
+  }
+
+  .flavours{
+    grid-template-columns: 1fr;
+  }
+
+  /* Slightly smaller badge */
+  .seal{
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Prevent accidental horizontal scroll */
+body{
+  overflow-x: hidden;
+}
   </style>
 </head>
 
